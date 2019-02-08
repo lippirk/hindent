@@ -1786,3 +1786,14 @@ x =
   (\(_ :: ErrorCall) -> pure 2)
 
 ```
+
+lippirk Comments on functions in where clause not quite right #TODO issue#
+
+```haskell
+-- TODO GITHUBLINK
+topLevelFunc = funcInWhereClause
+  where
+    -- comment on func in where clause
+    -- stays in the where clause
+    funcInWhereClause = undefined
+```
