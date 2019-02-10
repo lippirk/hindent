@@ -1791,9 +1791,18 @@ lippirk Comments on functions in where clause not quite right #TODO issue#
 
 ```haskell
 -- TODO GITHUBLINK
-topLevelFunc = funcInWhereClause
+topLevelFunc1 = f
   where
     -- comment on func in where clause
     -- stays in the where clause
-    funcInWhereClause = undefined
+    f = undefined
+
+topLevelFunc2 = f . g
+  where
+    {- multi
+       line
+       comment -}
+    f = undefined
+    -- single line comment
+    g = undefined
 ```
