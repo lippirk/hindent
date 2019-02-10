@@ -6,7 +6,11 @@ let
 in
   pkgs.stdenv.mkDerivation {
     name = "hindent-dev";
-    buildInputs = [
-      haskellPackages.cabal-install
+    buildInputs = with haskellPackages; [
+      cabal-install
+      hoogle
+      hlint
+      ghcid
+      pkgs.my-haskell-nvim
     ];
   }
